@@ -22,7 +22,7 @@ The LED pin can be pulled low to turn off the LED. This can be done by:
 - TCS34725 sensor
 ----
 ### WIRING
-Reference image [here](https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor/blob/main/WiringDiagram_RGB-Sensor.png)
+Raspberry Pi GPIO [diagram here](https://github.com/kingston-hackSpace/RaspberryPi/blob/main/GPIO-diagram.png)
 
 Arduino UNO|RGB Sensor
 -|-
