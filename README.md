@@ -32,9 +32,16 @@ SDA | SDA / GPIO2 / Pin3
 SCL| SCL / GPIO3 / Pin5
 
 ----
-## TUTORIAL 1: 
+### Python
 ----
-   
+
+We will programme the Raspberry Pi using *Python*, which is the standard programming language included with Raspberry Pi OS.
+
+
+----
+### Programming instruction
+
+
 
 
 ----
