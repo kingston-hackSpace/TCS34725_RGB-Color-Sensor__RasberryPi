@@ -44,9 +44,9 @@ Learn more about Python [here](https://www.python.org/)
 
 - Open the Raspberry Pi's Terminal (black top left icon).
 
-- Your terminal should pop-up, looking similar to [this]
+- Your terminal should pop-up, looking similar to [this](https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor__RasberryPi/blob/main/Terminal-view_.jpg)
 
-- From now on we will be typing instructions on the terminal.
+- From now on, we will be typing instructions on the terminal only.
 
 
 # Using the terminal
@@ -58,12 +58,39 @@ Learn more about Python [here](https://www.python.org/)
   sudo apt install -y python3-pip i2c-tools
   ```
 
+- Create a directory for your project (located at Desktop):
+
+  ```
+  cd Desktop
+  mkdir RGB_project
+  cd RGB_project
+  ```
+
+- Create a Virtual Environment (venv) located at your new RGB_project directory:
+
+  ```
+  python3 -m venv venv
+  ```
+
+- **Activate your *Virtual Environment***
+
+  ```
+  source venv/bin/activate
+  ```
+
 - Install the tcs34725 sensor library:
 
-  `sudo pip3 install adafruit-circuitpython-tcs34725`
+  ```
+  pip3 install adafruit-circuitpython-tcs34725
+  ```
 
+- Create a blank python script for your project titled "RGB_project.py". 
 
+  ```
+  nano RGB_project.py
+  ```
 
+- You now see that your terminal changed the way it looks. You are no longer typing directly on your terminal but inside your recently created script. We will type our code here. 
 
 
 ----
