@@ -1,6 +1,3 @@
-# Matched TCS34725 code for Raspberry Pi
-# Mirrors your Arduino calibration + normalised RGB behaviour
-
 import time
 import board
 import adafruit_tcs34725
@@ -11,9 +8,8 @@ import adafruit_tcs34725
 i2c = board.I2C()
 sensor = adafruit_tcs34725.TCS34725(i2c)
 
-# Match Arduino settings
-sensor.integration_time = 154   # ms (same as TCS34725_INTEGRATIONTIME_154MS)
-sensor.gain = 4                 # 4× (same as TCS34725_GAIN_4X)
+sensor.integration_time = 154   
+sensor.gain = 4                 
 
 # ─────────────────────────────────────────────
 # 1. WHITE REFERENCE CALIBRATION
@@ -29,7 +25,7 @@ print(f"White reference -> R:{white_r} G:{white_g} B:{white_b} C:{white_c}")
 print("===============================\n")
 
 # ─────────────────────────────────────────────
-# 2. MAIN LOOP (same logic as Arduino)
+# 2. MAIN LOOP 
 # ─────────────────────────────────────────────
 while True:
     r, g, b, c = sensor.color_raw
