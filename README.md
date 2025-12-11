@@ -35,127 +35,29 @@ SCL| SCL / GPIO3 / Pin5
 ### Python
 ----
 
-We will programme the Raspberry Pi using *Python*, which is the standard programming language included with Raspberry Pi OS.
+Our programming language for this tutorial will be *Python*, which is the standard programming language included with a Raspberry Pi.
 
-
-----
-### Programming instruction
-
-
-
+Learn more about Python [here](https://www.python.org/)
 
 ----
-### UNDERSTANDING THE VALUES
+### PROGRAMMING INSTRUCTIONS
 
-Based on the TCS34725 library, we can use specific functions to read the following parameters:
+- Open the Raspberry Pi's Terminal
 
-**Color Temperature (measured in Kelvin)**
+- Type the following instruction to update your device and install all necessary protocols
 
-  Typical range:
+  ```
+  sudo apt update && sudo apt upgrade -y
+  sudo apt install -y python3-pip i2c-tools
+  ```
 
-      1,500–3,000 K → warm / yellow
+- Type the following instruction to install the tcs34725 sensor library
 
-      3,000–5,000 K → neutral white
-
-      5,000–7,000 K → cool daylight
-
-      7,000–10,000+ K → very blue-ish light
-  
-**Lux (Lumens per Square Meter)**
-
-*The TCS34725 can read up to about 40k–50k lux before saturating*, depending on settings.
-
-    Typical range:
-
-      0–10 lux → very dark
-
-      10–100 lux → dim indoor light
-
-      100–1,000 lux → normal indoor light
-
-      1,000–10,000 lux → outdoors shade
-
-      10,000–100,000 lux → bright sunlight
-  
-**Clear Light (unfiltered) value**
-
-The TCS34725 measures light using a 16-bit ADC (analogue-to-digital converter).
-
-A 16-bit number can count from:
-
-    - 0 (no light detected)
-
-    - to 65,535 (maximum)
-
-  Typical range:
-
-    0–2,000 → dim or dark
-
-    2,000–10,000 → normal indoor lighting
-
-    10,000–40,000 → bright room or daylight
-
-    40,000+ → very bright / outdoor sun
-
-    65,535 → too bright (saturation)
+  `sudo pip3 install adafruit-circuitpython-tcs34725`
 
 
-**R, G and B values**
 
-The TCS34725 sensor doesn’t output human-readable colour names. Instead, it provides raw digital values via a 16-bit ADC (analogue-to-digital converter), representing the intensity of red, green, and blue light detected.
 
-These raw values give a reference of colour predominance — for example, if the red channel is much higher than green or blue, the object is likely red. However, for consistent comparisons, it is recommended to normalise these values (e.g., scale according to total light intensity or to a standard 0–255 range).
-
-The 16-bit RGB raw values can range from:
-
-    - 0 to 65,535
-
-----
-
-### Colour reading TIPS
-
-- Place different objects in front of the sensor to perform colour readings. See reference [here](https://www.youtube.com/watch?v=FQnzRW4XukA&t=5s)
-  
-- The closer and more centred, the more accurate the colour reading.
-
-- If your object is too far or at an angle, readings may be weak or uneven.
-
-- The TCS34725 LED helps reduce ambient light interference. The LED provides constant and stable illumination. 
-
-----
-## TUTORIAL 2: Calibrating the sensor for accurate readings
-
-- Upload [this code](https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor/blob/main/RGB_Sensor_RGB-cal.ino) to your Arduino board.
-
-- Open the Arduino Serial Monitor to see the incoming data.
-  
-- Place a matte-pure-white-card close to the sensor (usually 5–10 mm away).
-  
-- Make sure the sensor’s illumination LED is on.
-  
-- With the card still covering the sensor, press the **RESET** button on the Arduino. The Arduino code will reload, allowing us to collect a baseline of white readings.
-
-- Look at the Serial Monitor and wait until the calibration is completed.
-
-- You now will see new values with calibrated data.
-
-- The new sensor values represent:
-
-  - Raw RGB readings + Raw Brightness(C) (0 - 65,535)
-    
-  - RGB percentages (%) as normalised values (0.0 - 1.0)
-    
-  - Normalised brightness values (0.0 - 1.0)
-  
-----
-## TUTORIAL 3: Sensing HSV
-
-- Upload [this code](https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor/blob/main/RGB_Sensor_HSV-cal.ino) to your Arduino board
-
-----
-## TUTORIAL 4:  Naming HSV colours
-
-- Upload [this code](https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor/blob/main/RGB_sensor_HSV-names.ino) to your Arduino board
 
 ----
 ### MORE TUTORIALS
