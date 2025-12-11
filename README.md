@@ -42,16 +42,23 @@ Learn more about Python [here](https://www.python.org/)
 ----
 ### PROGRAMMING INSTRUCTIONS
 
-- Open the Raspberry Pi's Terminal
+- Open the Raspberry Pi's Terminal (black top left icon).
 
-- Type the following instruction to update your device and install all necessary protocols
+- Your terminal should pop-up, looking similar to [this]
+
+- From now on we will be typing instructions on the terminal.
+
+
+# Using the terminal
+
+- Updating device and installing all necessary protocols:
 
   ```
   sudo apt update && sudo apt upgrade -y
   sudo apt install -y python3-pip i2c-tools
   ```
 
-- Type the following instruction to install the tcs34725 sensor library
+- Install the tcs34725 sensor library:
 
   `sudo pip3 install adafruit-circuitpython-tcs34725`
 
