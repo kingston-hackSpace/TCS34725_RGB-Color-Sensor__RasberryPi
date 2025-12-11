@@ -1,4 +1,4 @@
-# TCS34725_RGB-Color-Sensor__RasberryPi
+# TCS34725_RGB-Color-Sensor__RaspberryPi
 
 The [TCS34725 RGB sensor](https://learn.adafruit.com/adafruit-color-sensors/overview) provides a digital return of red, green, blue (RGB), and clear light sensing values. An RGB Color sensor helps you accurately detect an object’s colour in your interactive projects.
 
@@ -48,7 +48,7 @@ Learn more about Python [here](https://www.python.org/)
   
 - Open the Raspberry Pi's Terminal (black top left icon).
 
-- The RPi terminal should pop-up, looking similar to [this](https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor__RasberryPi/blob/main/Terminal-view_.jpg)
+- The RPi terminal should pop-up, looking similar to [this](https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor__RaspberryPi/blob/main/Terminal-view_.jpg)
 
 - From now on, we will be typing instructions on the terminal only.
 
@@ -91,7 +91,7 @@ Learn more about Python [here](https://www.python.org/)
 - Download python script from github
 
   ```
-  wget https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor__RasberryPi/archive/refs/heads/main.zip
+  wget https://github.com/kingston-hackSpace/TCS34725_RGB-Color-Sensor__RaspberryPi/archive/refs/heads/main.zip
   ```
   
 - You should have a "main.zip" file located in your project directory. To confirm that everything went well, type the following:
@@ -106,7 +106,7 @@ Learn more about Python [here](https://www.python.org/)
 
   ```
   unzip main.zip
-  cd TCS34725_RGB-Color-Sensor__RasberryPi-main
+  cd TCS34725_RGB-Color-Sensor__RaspberryPi-main
   ls
   ```
 
